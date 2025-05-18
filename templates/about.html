@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block desc %} 
+{{ block.super }}
+<meta name="description" content="Learn about Casa Living, Pune’s trusted PG brand. We provide secure, community-focused accommodations with top-notch amenities for a comfortable lifestyle."/>
+{% endblock %}
+{% block title %}About Us{% endblock title %}
+
+{% block css %}
+{{ block.super }}
+<link href="{% static 'css/about.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<section class="bg-dark dark-mode position-relative d-flex align-items-center position-relative py-5 overflow-hidden"  style="background-image: url('{% static "images/about.jpg" %}');background-position: center;
+background-blend-mode: multiply;">
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 proheading fw-bold " style="color: #ffffff;">ABOUT US</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" style="color:white; font-size:20px;">Welcome to Casa Living – your home away from home. Located in a safe, well-connected neighborhood, Casa Living offers premium paying guest accommodations designed for comfort, convenience, and community. Whether you're a student or a working professional, our fully furnished rooms, modern amenities, and peaceful environment provide the ideal setting for a balanced lifestyle. At Casa Living, we believe in creating not just a place to stay, but a place to belong.</p>
+    
+    </div>
+  </div> 
+</section>
+
+ 
+  
+ <section class="py-0 py-xl-5" id="team">
+   <div class="container team" style="display: block; padding-left:127px">
+       <div class="row g-3">
+           <!-- Loop through each team member -->
+           {% for member in t %}
+           <div class="col-lg-4 col-md-6 col-sm-12"> <!-- Responsive columns -->
+               <div class="profile-card">
+                   <div class="img">
+                       <!-- Dynamic image source from database -->
+                       <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                   </div>
+                   <div class="caption">
+                       <!-- Dynamic name and title -->
+                       <h3>{{ member.name }}</h3>
+                       <p>{{ member.description }}</p>
+                   </div>
+               </div>
+           </div>
+           {% endfor %}
+       </div>
+   </div>
+</section> 
+
+
+{% endblock content %}

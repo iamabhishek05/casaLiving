@@ -1,0 +1,217 @@
+  
+@font-face {
+    font-family: 'Mokoto'; 
+    src: url('../fonts/mokoto.regular.ttf'); 
+  }
+ 
+ .proheading
+ {
+    font-family:'Mokoto';
+    letter-spacing: 3px;
+ }
+ h1 {
+     text-align: center;
+     font-weight: 300;
+     color: #777
+  }
+  
+  h1 span {
+     font-weight: 600;
+  }
+  
+  .lg {
+     width: 80%;
+     padding: 50px 0;
+     margin: 50px auto;
+     position: relative;
+     overflow: hidden;
+  }
+  
+  .lg:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 50%;
+     margin-left: -1px;
+     width: 2px;
+     height: 100%;
+     background: #CCD1D9;
+     z-index: 1
+  }
+  
+  .timeline-block {
+     width: -webkit-calc(50% + 8px);
+     width: -moz-calc(50% + 8px);
+     width: calc(50% + 8px);
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: flex;
+     -webkit-box-pack: justify;
+     -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+     justify-content: space-between;
+     clear: both;
+  }
+  
+  .timeline-block-right {
+     float: right;
+  }
+  
+  .timeline-block-left {
+     float: left;
+     direction: rtl
+  }
+  
+  .marker {
+     width: 16px;
+     height: 16px;
+     border-radius: 50%;
+     border: 2px solid #F5F7FA;
+     background: #4FC1E9;
+     margin-top: 10px;
+     z-index: 9999
+  }
+  
+  .timeline-content {
+     width: 95%;
+     padding: 0 15px;
+     color: #666
+  }
+  
+  .timeline-content h3 {
+     margin-top: 5px;
+     margin-bottom: 5px;
+     font-size: 25px;
+     font-weight: 500
+  }
+  
+  .timeline-content span {
+     font-size: 15px;
+     color: #a4a4a4;
+  }
+  
+  .timeline-content p {
+     font-size: 14px;
+     line-height: 1.5em;
+     word-spacing: 1px;
+     color: #888;
+  }
+ 
+  @media screen and  (max-width: 436px)
+  {
+ .team{
+     padding-left: 63px!important;
+ }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+     .container:before {
+        left: 8px;
+        width: 2px;
+     }
+     .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+     }
+     .timeline-block-right {
+        float: none;
+     }
+  
+     .timeline-block-left {
+        float: none;
+        direction: ltr;
+     }
+  }
+  
+  
+ 
+   .main{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #0c5db9;
+   }
+   .profile-card{
+     position: relative;
+     font-family: sans-serif;
+     width: 220px;
+     height: 220px;
+     background: #fff;
+     padding: 30px;
+     border-radius: 50%;
+     box-shadow: 0 0 22px #3336;
+     transition: .6s;
+     margin: 13px 25px;
+   }
+   .profile-card:hover{
+     border-radius: 10px;
+     height: 260px;
+   }
+   .profile-card .img{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     transition: .6s;
+     z-index: 99;
+   }
+   .profile-card:hover .img{
+     transform: translateY(-60px);
+   }
+   .img img{
+     width: 100%;
+     border-radius: 50%;
+     box-shadow: 0 0 22px #3336;
+     transition: .6s;
+   }
+   .profile-card:hover img{
+     border-radius: 10px;
+   }
+   .caption{
+     text-align: center;
+     transform: translateY(-80px);
+     opacity: 0;
+     transition: .6s;
+   }
+   .profile-card:hover .caption{
+     opacity: 1;
+   }
+   .caption h3{
+     font-size: 21px;
+     font-family: sans-serif;
+   }
+   .caption p{
+     font-size: 15px;
+     color: #0c52a1;
+     font-family: sans-serif;
+     margin: 2px 0 9px 0;
+   }
+   .caption .social-links a{
+     color: #333;
+     margin-right: 15px;
+     font-size: 21px;
+     transition: .6s;
+   }
+   .social-links a:hover{
+     color: #0c52a1;
+   }
+
+    
+  .custom-btn {
+    background-color: rgb(138, 78, 19) !important;
+    color: #F5EEDD !important;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 18px;
+  }
+  
+  .custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
+  }
