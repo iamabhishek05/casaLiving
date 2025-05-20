@@ -5,7 +5,7 @@ from django.core.validators import RegexValidator
 class House(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    location = models.CharField(max_length=255)
+    location = models.TextField()
     image = models.ImageField(upload_to='houses/')
     created_at = models.DateTimeField(auto_now_add=True)
     

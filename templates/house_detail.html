@@ -216,53 +216,18 @@ block.super }}
                 {% endfor %}
               </div>
 
-              <p class="mb-3">
-                Demesne far-hearted suppose venture excited see had has.
-                Dependent on so extremely delivered by. Yet no jokes worse her
-                why.
-                <b
-                  >Bed one supposing breakfast day fulfilled off depending
-                  questions.</b
-                >
-              </p>
-              <p class="mb-0">
-                Delivered dejection necessary objection do Mr prevailed. Mr
-                feeling does chiefly cordial in do. Water timed folly right
-                aware if oh truth. Large above be to means. Dashwood does
-                provide stronger is.
-              </p>
+              <br>
 
-              <div class="collapse" id="collapseContent">
-                <p class="my-3">
-                  We focus a great deal on the understanding of behavioral
-                  psychology and influence triggers which are crucial for
-                  becoming a well rounded Digital Marketer. We understand that
-                  theory is important to build a solid foundation, we understand
-                  that theory alone isn't going to get the job done so that's
-                  why this rickets is packed with practical hands-on examples
-                  that you can follow step by step.
-                </p>
-                <p class="mb-0">
-                  Behavioral psychology and influence triggers which are crucial
-                  for becoming a well rounded Digital Marketer. We understand
-                  that theory is important to build a solid foundation, we
-                  understand that theory alone isn't going to get the job done
-                  so that's why this tickets is packed with practical hands-on
-                  examples that you can follow step by step.
-                </p>
-              </div>
-              <a
-                class="p-0 mb-4 mt-2 btn-more d-flex align-items-center collapsed"
-                data-bs-toggle="collapse"
-                href="#collapseContent"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseContent"
-              >
-                See <span class="see-more ms-1">more</span
-                ><span class="see-less ms-1">less</span
-                ><i class="fa-solid fa-angle-down ms-2"></i>
-              </a>
+              <div class="description-preview">
+  
+
+  
+    <p class="mb-0">{{ house.description }}</p>
+  
+
+ 
+</div>
+
             </div>
             <!-- Card body END -->
           </div>
@@ -286,7 +251,7 @@ block.super }}
           <!-- Book now START -->
           <div class="card card-body border">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3996.594343373956!2d73.84707107519003!3d18.452325682627993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb000cb42d71%3A0xa4c8287c70cd8fd9!2sCasa%20Living%2C%20Daffodil%20House!5e1!3m2!1sen!2sin!4v1746356909584!5m2!1sen!2sin"
+              src="{{ house.location }}"
               height="450"
               style="border: 0"
               allowfullscreen=""
