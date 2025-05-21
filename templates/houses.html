@@ -43,7 +43,7 @@
         <!-- Text Section -->
         <div class="room-details px-4 py-3">
           <h4 style=" color:rgb(0, 0, 0)!important; font-weight: 600" >{{ room.title }}</h4>
-          <p class="room-description">{{ room.description|linebreaksbr }}</p>
+         <p class="room-description">{{ room.description|truncatewords:25|linebreaksbr }}....</p>
 
           <!-- Amenities tags -->
 
