@@ -27,22 +27,25 @@ background-blend-mode: multiply;">
   
  <section class="py-0 py-xl-5" id="team">
    <div class="container team" style="display: block; padding-left:127px">
-       <div class="row g-3">
+       <div class="row g-3 justify-content-center">
            <!-- Loop through each team member -->
            {% for member in t %}
-           <div class="col-lg-4 col-md-6 col-sm-12"> <!-- Responsive columns -->
-               <div class="profile-card">
-                   <div class="img">
-                       <!-- Dynamic image source from database -->
-                       <img src="{{ member.image.url }}" alt="{{ member.name }}">
-                   </div>
-                   <div class="caption">
-                       <!-- Dynamic name and title -->
-                       <h3>{{ member.name }}</h3>
-                       <p>{{ member.description }}</p>
-                   </div>
-               </div>
-           </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+  <div class="profile-card p-3">
+    <div class="img text-center">
+      <!-- Dynamic image with responsive class -->
+      <img src="{{ member.image.url }}" alt="{{ member.name }}" class="img-fluid rounded-circle" style="max-height: 200px; object-fit: cover;">
+    </div>
+    <div class="caption mt-3 text-center">
+      <!-- Name and role -->
+      <h3 class="mb-1">{{ member.name }}</h3>
+      <small class="text-muted d-block mb-2">{{ member.role }}</small>
+     
+
+    </div>
+  </div>
+</div>
+
            {% endfor %}
        </div>
    </div>
