@@ -215,3 +215,6 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
   }
+ *{
+        font-family:'Poppins', sans-serif;
+    } 

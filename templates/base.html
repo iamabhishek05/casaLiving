@@ -32,15 +32,13 @@ rel="stylesheet"
     {% block css %}{% endblock %}
 
     <style>
-      @font-face {
-        font-family: 'Mokoto'; 
-        src: url({% static 'fonts/mokoto.regular.ttf' %}); 
-      }
+  
         .nav-item
       {
           padding-right: 16px;
       }
 
+    
 
      
 
@@ -51,8 +49,8 @@ rel="stylesheet"
     }
 
     *{
-        font-family:'Poppins';
-    }
+        font-family:'Poppins', sans-serif;
+    } 
     
 
     
@@ -153,9 +151,10 @@ rel="stylesheet"
 </head>
     
 <body style="background-color: #ffffff ;" class=" headroom--not-bottom headroom--pinned headroom--top" data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
-  <nav class="navbar navbar-marketing navbar-expand-lg fixed-top" style="box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%); background-color: #F5EEDD;	">
+  <nav class="navbar navbar-marketing navbar-expand-lg" style=" background-color: #F5EEDD;	">
     <div class="container px-4">
-        <a class="navbar-brand heading text-dark" style="font-family:Mokoto; color:rgb(138, 78, 19) !important; font-weight:600; font-style: bold;" href="/">Casa Living</a>
+        <a class="navbar-brand heading text-dark" style="font-family:Mokoto; color:rgb(138, 78, 19) !important; font-weight:600; font-style: bold;" href="/"> <img src="{% static 'images/logo.png' %}" alt="Casa Living Logo" 
+       style="height: 45px; width: auto;" class="img-fluid"> </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav ms-auto me-lg-5"> 
@@ -168,7 +167,7 @@ rel="stylesheet"
     </div>
 </nav> 
     
-    <br>
+  
     <br>
     
     

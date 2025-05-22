@@ -136,7 +136,9 @@
       color: #dc3545;
   }
   
-
+ *{
+        font-family:'Poppins', sans-serif;
+    } 
   
   .custom-btn {
     background-color: rgb(138, 78, 19) !important;
