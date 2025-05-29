@@ -1,19 +1,19 @@
 
 .room-card {
-    background-color: #F5EEDD;	
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      overflow: hidden;
-      transition: all 0.3s ease-in-out;
+         background-color: #faebe9 !important;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
   }
   
   .badge-amen{
     
-    background-color: #ffe9d8;	
-    border-radius: 30px;
-    border: 2px solid rgb(138, 78, 19);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    color: #000000;
+      background-color: #ffd1ca;	
+  border-radius: 8px;
+  border: 2px solid #ffa8a3;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  color: #000000;
   }
   
   .room-card:hover {
@@ -61,7 +61,7 @@
       margin-bottom: 6px;
       font-size: 14px;
       padding: 8px 12px;
-      border-radius: 50px;
+      border-radius: 10px;
   }
   
   /* Button Styling */
@@ -139,7 +139,7 @@
 
   
   .custom-btn {
-    background-color: rgb(138, 78, 19) !important;
+    background-color: #f56551 !important;
     color: #F5EEDD !important;
     font-weight: 600;
     display: inline-flex;

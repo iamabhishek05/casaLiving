@@ -12,6 +12,7 @@
 />
 
 {% endblock %} {% block content %}
+{% comment %} 
 <section
   class="pt-3 pt-lg-5 pb-5 overflow-hidden"
   style="
@@ -19,6 +20,8 @@
   "
   ;
 >
+
+
   <div class="container">
     <div class="row g-4 g-lg-5">
       <!-- Left content START -->
@@ -26,57 +29,18 @@
         <!-- Title -->
         <h1
           class="mb-4 display-4"
-          style="color: rgb(138, 78, 19) !important; font-weight: 600"
+          style=" font-weight: 600"
         >
           <!-- Svg decoration -->
           <span>
-            <svg
-              class="fill-warning"
-              width="103"
-              height="100"
-              viewBox="0 0 103 100"
-            >
-              <style>
-                path {
-                  fill: rgb(138, 78, 19);
-                }
-              </style>
-              <path
-                d="M69.0166 69.7017C56.5959 80.712 39.8019 84.7239 25.181 80.1338C24.3382 79.9118 23.8242 78.9676 24.1599 78.1317C24.3819 77.2889 25.3261 76.7749 26.162 77.1106C39.7195 81.3514 55.3555 77.6122 66.9322 67.3502C78.5088 57.0882 84.0965 42.0136 81.5127 28.0453C81.3934 27.1819 81.9032 26.2994 82.7665 26.1801C83.6299 26.0608 84.5124 26.5706 84.6317 27.4339C87.4951 42.4465 81.4374 58.6914 69.0166 69.7017Z"
-              ></path>
-              <path
-                d="M26.0436 85.7222C25.923 85.8291 25.8627 85.8825 25.6887 85.9291C24.8651 86.3362 23.9689 86.0539 23.5015 85.2838C22.0666 82.5718 21.1317 76.2941 27.8958 72.0209C28.6659 71.5536 29.6224 71.7824 30.0898 72.5525C30.5571 73.3227 30.3283 74.2792 29.5582 74.7466C23.8589 78.3989 26.0805 83.213 26.3875 83.8023C26.7479 84.4518 26.5863 85.2412 26.0436 85.7222Z"
-              ></path>
-              <path
-                d="M90.0771 28.9603C89.5344 29.4413 88.7314 29.5071 88.1298 29.0713C87.635 28.7562 83.0688 25.9128 78.8126 31.1931C78.2562 31.9017 77.2257 31.9538 76.5706 31.4577C75.8621 30.9014 75.81 29.8708 76.306 29.2158C81.3597 23.0131 87.48 24.6943 90.0002 26.4442C90.769 26.9471 90.9349 27.9845 90.3786 28.693C90.258 28.7999 90.1374 28.9068 90.0771 28.9603Z"
-              ></path>
-              <path
-                d="M26.6015 44.2033C28.5257 46.3739 28.3271 49.6725 26.1565 51.5966C23.9859 53.5208 20.6873 53.3222 18.7632 51.1516C16.8391 48.981 17.0376 45.6824 19.2082 43.7583C21.3788 41.8342 24.6774 42.0327 26.6015 44.2033Z"
-              ></path>
-              <path
-                d="M56.8095 17.4259C58.7337 19.5965 58.5351 22.895 56.3645 24.8192C54.1939 26.7433 50.8953 26.5447 48.9712 24.3741C47.0471 22.2035 47.2456 18.905 49.4162 16.9808C51.5869 15.0567 54.8854 15.2552 56.8095 17.4259Z"
-              ></path>
-            </svg>
+          
           </span>
           Not Just
           <span> a PG, It’s</span>
-          <span class="position-relative d-inline-block"
+          <span class="position-relative d-inline-block"  style="color: #f56551 !important; font-weight: 600"
             >Casa Living
-            <!-- SVG decoration -->
-            <span
-              class="position-absolute top-50 start-50 translate-middle z-index-n1"
-            >
-              <svg
-                class="fill-orange"
-                width="303"
-                height="86"
-                viewBox="0 0 303 86"
-              >
-                <path
-                  d="M288.197 19.3999C281.599 15.6998 273.654 13.03 265.424 10.926C256.533 8.64794 247.263 6.92124 237.946 5.4267C218.461 2.249 198.384 0.406219 178.237 0.0579769C158.609 -0.275755 138.888 0.8125 119.733 3.49686C108.17 5.10748 96.8189 7.2985 85.8466 10.0264C81.4955 11.0131 77.168 12.0723 72.9115 13.2331C56.382 17.7022 40.5146 23.4192 26.3972 30.355C12.9182 36.9861 0.716203 46.0404 0.999971 57.2131C1.14185 62.2772 4.16871 67.051 9.98595 70.693C15.4721 74.1319 22.6846 76.3809 29.9679 78.0206C38.7647 80.0085 48.0345 81.3289 57.257 82.4026C67.1179 83.5489 77.0734 84.2889 87.0762 84.6807C107.413 85.4642 127.892 84.7968 148.063 83.0266C168.399 81.2418 188.429 78.3543 208.127 74.8139C227.399 71.3459 246.436 67.2976 265.141 62.8285C278.927 59.5348 294.227 55.0802 300.446 46.2435C307.091 36.812 299.949 25.973 288.197 19.3999ZM298.862 46.7804C295.48 50.9593 289.592 54.0935 283.207 56.4876C276.633 58.9543 269.468 60.7391 262.279 62.4077C252.915 64.5843 243.503 66.6737 234.044 68.6616C215.174 72.6083 196.019 76.0762 176.534 78.7171C157.191 81.3289 137.54 83.0991 117.747 83.6505C97.9304 84.2019 77.9957 83.5634 58.4866 81.3289C49.5243 80.2987 40.5146 79.0363 31.907 77.1645C24.5764 75.5829 17.3403 73.4499 11.6649 70.1126C5.49296 66.4561 2.15869 61.5226 2.22963 56.2555C2.32422 50.7417 5.72943 45.489 10.9555 41.0489C16.1106 36.6959 22.7319 33.0974 29.6842 29.8472C36.2108 26.8145 43.0213 24.0141 50.0918 21.4748C48.4601 22.1278 46.8521 22.7953 45.2678 23.4772C37.7716 26.684 30.4409 30.1664 23.9615 34.1131C17.695 37.9438 12.1615 42.3839 9.30018 47.5785C6.55709 52.5554 6.10779 58.1853 9.77313 63.0462C13.0838 67.4427 19.303 70.7655 26.279 72.8985C34.6974 75.4813 44.2036 76.2358 53.497 76.381C63.8309 76.5406 74.2357 76.1488 84.5696 75.757C95.0454 75.3652 105.497 74.7993 115.926 74.0884C136.783 72.6664 157.545 70.6204 178.071 67.9361C187.956 66.6447 197.817 65.2227 207.583 63.6411C208.269 63.525 208.718 62.3642 208.009 62.4658C188.358 65.629 168.447 68.2118 148.394 70.2142C128.435 72.202 108.312 73.624 88.1404 74.4366C78.0666 74.8429 67.9219 75.1911 57.8008 75.2056C48.3419 75.2201 38.6465 74.7558 29.8261 72.5068C22.5427 70.6785 15.8032 67.6169 11.8777 63.3509C7.33745 58.4175 7.52663 52.4393 10.6481 47.2302C13.7695 41.9776 19.7523 37.581 26.3263 33.8084C32.7583 30.1083 39.8289 26.7855 47.1359 23.7529C59.2197 18.7034 72.2257 14.4955 85.7756 11.1292C90.7889 9.99737 95.8494 8.98167 100.981 8.08205C117.96 5.07846 135.553 3.32274 153.218 2.88744C161.754 2.66979 170.315 2.78587 178.851 3.19215C179.537 3.22117 180.128 2.06037 179.277 2.01684C167.69 1.45094 156.032 1.47996 144.468 2.06037C145.745 1.97331 146.999 1.88625 148.275 1.8137C167.879 0.6674 187.696 1.04466 207.157 2.78587C226.075 4.46904 245.111 7.25497 262.894 11.608C278.714 15.4677 294.085 21.6635 299.808 32.0092C302.456 36.812 302.574 42.1662 298.862 46.7804Z"
-                ></path>
-              </svg>
-            </span>
+           
+         
           </span>
         </h1>
 
@@ -124,7 +88,7 @@
 
     <span
       class="ms-2 text-dark fw-semibold"
-      style="color: rgb(138, 78, 19) !important"
+      style="color: #f56551 !important"
     >Watch video</span>
   </button>
 </div>
@@ -150,7 +114,314 @@
       </div>
       <!-- Left content END -->
 
+      
+
       <div class="col-lg-6 position-relative order-1 order-lg-2">
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <a href="#!">
+                            <div class="rounded-3 card-lift" style="
+    background-image: url({% static 'images/img2.jpeg' %});
+    background-repeat: no-repeat;
+    height: 386px;
+    background-size: cover;
+"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <a href="#!">
+                            <div class="mb-4 rounded-3 card-lift" style="
+    background-image: url({% static 'images/process.jpg' %});
+    background-repeat: no-repeat;
+    height: 180px;
+    background-size: cover;
+"></div>
+                        </a>
+                        <a href="#!">
+                            <div class="mb-2 rounded-3 card-lift" style="
+    background-image: url({% static 'images/img4.jpg' %});
+    background-repeat: no-repeat;
+    height: 180px;
+    background-size: cover;
+"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </div>
+</section> {% endcomment %}
+<section>
+  <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="position-relative">
+          <img src="{% static 'images/img2.jpeg' %}" class="d-block w-100" style="border-radius: 0px!important; height: 600px; object-fit: cover; filter: brightness(30%); border: none;" alt="Slide 1">
+          <div class="container position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="mb-4 display-4" style="font-weight: 600;">
+              Not Just <span>a PG, It’s</span>
+              <span class="position-relative d-inline-block" style="color: #f56551 !important; font-weight: 600;">Casa Living</span>
+            </h1>
+           <p class="mb-3 col-lg-8 mx-auto">
+              We’re passionate about creating more than just a place to stay — we’re building comfort, care, and convenience into every corner of your PG experience. At Casa Living, we believe in providing a peaceful, safe, and homely environment that supports your journey every day.
+            </p>
+            <div class="hstack gap-4 flex-wrap align-items-center justify-content-center">
+              <a href="#contact" class="btn custom-btn mb-0">
+                Contact us
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#F5EEDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <div class="d-flex align-items-center py-2 ms-0 ms-sm-2">
+                <button type="button" class="ripple-button position-relative d-flex align-items-center justify-content-center text-decoration-none border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#videoModal">
+                  <span class="ripple-circle"><i class="fas fa-play text-white"></i></span>
+                  <span class="ms-2 text-dark fw-semibold" style="color: #f56551 !important;">Watch video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="position-relative">
+          <img src="{% static 'images/process.jpg' %}" class="d-block w-100" style="border-radius: 0px!important; height: 600px; object-fit: cover; filter: brightness(30%); border: none;" alt="Slide 2">
+            <div class="container position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="mb-4 display-4" style="font-weight: 600;">
+              Not Just <span>a PG, It’s</span>
+              <span class="position-relative d-inline-block" style="color: #f56551 !important; font-weight: 600;">Casa Living</span>
+            </h1>
+            <p class="mb-3 col-lg-8 mx-auto">
+              We’re passionate about creating more than just a place to stay — we’re building comfort, care, and convenience into every corner of your PG experience. At Casa Living, we believe in providing a peaceful, safe, and homely environment that supports your journey every day.
+            </p>
+            <div class="hstack gap-4 flex-wrap align-items-center justify-content-center">
+              <a href="#contact" class="btn custom-btn mb-0">
+                Contact us
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#F5EEDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <div class="d-flex align-items-center py-2 ms-0 ms-sm-2">
+                <button type="button" class="ripple-button position-relative d-flex align-items-center justify-content-center text-decoration-none border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#videoModal">
+                  <span class="ripple-circle"><i class="fas fa-play text-white"></i></span>
+                  <span class="ms-2 text-dark fw-semibold" style="color: #f56551 !important;">Watch video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="position-relative">
+          <img src="{% static 'images/img4.jpg' %}" class="d-block w-100" style="border-radius: 0px!important; height: 600px; object-fit: cover; filter: brightness(30%); border: none;" alt="Slide 3">
+            <div class="container position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="mb-4 display-4" style="font-weight: 600;">
+              Not Just <span>a PG, It’s</span>
+              <span class="position-relative d-inline-block" style="color: #f56551 !important; font-weight: 600;">Casa Living</span>
+            </h1>
+            <p class="mb-3 col-lg-8 mx-auto">
+              We’re passionate about creating more than just a place to stay — we’re building comfort, care, and convenience into every corner of your PG experience. At Casa Living, we believe in providing a peaceful, safe, and homely environment that supports your journey every day.
+            </p>
+            <div class="hstack gap-4 flex-wrap align-items-center justify-content-center">
+              <a href="#contact" class="btn custom-btn mb-0">
+                Contact us
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#F5EEDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <div class="d-flex align-items-center py-2 ms-0 ms-sm-2">
+                <button type="button" class="ripple-button position-relative d-flex align-items-center justify-content-center text-decoration-none border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#videoModal">
+                  <span class="ripple-circle"><i class="fas fa-play text-white"></i></span>
+                  <span class="ms-2 text-dark fw-semibold" style="color: #f56551 !important;">Watch video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal for Watch Video -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://drive.google.com/file/d/14obB3Bm1ZoN2kdgFdHL2IbAgtyGvTd92/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br />
+<section>
+    <div class="container">
+        <div class="row border-bottom">
+            <div
+                class="col-md-4 border-end-md border-bottom border-bottom-md-0">
+                <div class="text-center py-lg-5 p-4">
+                    <div class="mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" fill="currentColor"
+                            class="bi bi-people-fill text-primary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Expert Team</h4>
+                        <p class="mb-0">Our dedicated team ensures a comfortable and homely environment for all our residents.</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-md-4 border-end-md border-bottom border-bottom-md-0">
+                <div class="text-center py-lg-5 p-4">
+                    <div class="mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" fill="currentColor"
+                            class="bi bi-handshake-fill text-primary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Trusted by Many</h4>
+                        <p class="mb-0">Casa Living PG in Pune is a trusted choice for students and professionals alike.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center py-lg-5 p-4">
+                    <div class="mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" fill="currentColor"
+                            class="bi bi-stars text-primary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Years of Experience</h4>
+                        <p class="mb-0">Providing safe, secure, and well-maintained PG accommodations in Pune.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+     
+
+<div class="container py-5">
+  <h2
+    class="text-center mb-5"
+    style="color: #f56551 !important; font-weight: 600"
+  >
+    <span class="position-relative d-inline-block"
+      >Our Homes
+      <!-- SVG decoration -->
+      {% comment %} <span
+        class="position-absolute top-50 start-50 translate-middle z-index-n1"
+      >
+        <svg class="fill-orange" width="303" height="86" viewBox="0 0 303 86">
+          <path
+            d="M288.197 19.3999C281.599 15.6998 273.654 13.03 265.424 10.926C256.533 8.64794 247.263 6.92124 237.946 5.4267C218.461 2.249 198.384 0.406219 178.237 0.0579769C158.609 -0.275755 138.888 0.8125 119.733 3.49686C108.17 5.10748 96.8189 7.2985 85.8466 10.0264C81.4955 11.0131 77.168 12.0723 72.9115 13.2331C56.382 17.7022 40.5146 23.4192 26.3972 30.355C12.9182 36.9861 0.716203 46.0404 0.999971 57.2131C1.14185 62.2772 4.16871 67.051 9.98595 70.693C15.4721 74.1319 22.6846 76.3809 29.9679 78.0206C38.7647 80.0085 48.0345 81.3289 57.257 82.4026C67.1179 83.5489 77.0734 84.2889 87.0762 84.6807C107.413 85.4642 127.892 84.7968 148.063 83.0266C168.399 81.2418 188.429 78.3543 208.127 74.8139C227.399 71.3459 246.436 67.2976 265.141 62.8285C278.927 59.5348 294.227 55.0802 300.446 46.2435C307.091 36.812 299.949 25.973 288.197 19.3999ZM298.862 46.7804C295.48 50.9593 289.592 54.0935 283.207 56.4876C276.633 58.9543 269.468 60.7391 262.279 62.4077C252.915 64.5843 243.503 66.6737 234.044 68.6616C215.174 72.6083 196.019 76.0762 176.534 78.7171C157.191 81.3289 137.54 83.0991 117.747 83.6505C97.9304 84.2019 77.9957 83.5634 58.4866 81.3289C49.5243 80.2987 40.5146 79.0363 31.907 77.1645C24.5764 75.5829 17.3403 73.4499 11.6649 70.1126C5.49296 66.4561 2.15869 61.5226 2.22963 56.2555C2.32422 50.7417 5.72943 45.489 10.9555 41.0489C16.1106 36.6959 22.7319 33.0974 29.6842 29.8472C36.2108 26.8145 43.0213 24.0141 50.0918 21.4748C48.4601 22.1278 46.8521 22.7953 45.2678 23.4772C37.7716 26.684 30.4409 30.1664 23.9615 34.1131C17.695 37.9438 12.1615 42.3839 9.30018 47.5785C6.55709 52.5554 6.10779 58.1853 9.77313 63.0462C13.0838 67.4427 19.303 70.7655 26.279 72.8985C34.6974 75.4813 44.2036 76.2358 53.497 76.381C63.8309 76.5406 74.2357 76.1488 84.5696 75.757C95.0454 75.3652 105.497 74.7993 115.926 74.0884C136.783 72.6664 157.545 70.6204 178.071 67.9361C187.956 66.6447 197.817 65.2227 207.583 63.6411C208.269 63.525 208.718 62.3642 208.009 62.4658C188.358 65.629 168.447 68.2118 148.394 70.2142C128.435 72.202 108.312 73.624 88.1404 74.4366C78.0666 74.8429 67.9219 75.1911 57.8008 75.2056C48.3419 75.2201 38.6465 74.7558 29.8261 72.5068C22.5427 70.6785 15.8032 67.6169 11.8777 63.3509C7.33745 58.4175 7.52663 52.4393 10.6481 47.2302C13.7695 41.9776 19.7523 37.581 26.3263 33.8084C32.7583 30.1083 39.8289 26.7855 47.1359 23.7529C59.2197 18.7034 72.2257 14.4955 85.7756 11.1292C90.7889 9.99737 95.8494 8.98167 100.981 8.08205C117.96 5.07846 135.553 3.32274 153.218 2.88744C161.754 2.66979 170.315 2.78587 178.851 3.19215C179.537 3.22117 180.128 2.06037 179.277 2.01684C167.69 1.45094 156.032 1.47996 144.468 2.06037C145.745 1.97331 146.999 1.88625 148.275 1.8137C167.879 0.6674 187.696 1.04466 207.157 2.78587C226.075 4.46904 245.111 7.25497 262.894 11.608C278.714 15.4677 294.085 21.6635 299.808 32.0092C302.456 36.812 302.574 42.1662 298.862 46.7804Z"
+          ></path>
+        </svg>
+      </span>
+    </span> {% endcomment %}
+  </h2>
+
+  <div class="row gy-5">
+    {% for room in house %}
+    <div class="col-12">
+      <div class="room-card d-flex flex-column flex-md-row align-items-start">
+        <!-- Image Section -->
+        <div class="room-image">
+          <img
+            src="{{room.image.url}}"
+            class="img-fluid"
+            alt="Default Room Image"
+          />
+        </div>
+
+        <!-- Text Section -->
+        <div class="room-details px-4 py-3">
+          <h4 style="color: rgb(0, 0, 0) !important; font-weight: 600">
+            {{ room.title }}
+          </h4>
+          <p class="room-description" style="color: rgb(0, 0, 0) !important;">{{ room.description|truncatewords:25|linebreaksbr }}....</p>
+
+          <!-- Amenities tags -->
+
+          <div class="amenities">
+            {% for r in room.amenities.all %}
+            <span class="badge badge-amen">{{ r.tag.name }}</span>
+            {% endfor %}
+          </div>
+
+          <div class="button-group mt-4">
+            <!-- Button to trigger modal -->
+            <a
+              href="{% url 'house_detail' pk=room.id %}"
+              class="btn custom-btn mb-0"
+            >
+              View house
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="#F5EEDD"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-arrow-right ms-2"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            {% comment %}
+            <button
+              class="btn-visit"
+              data-bs-toggle="modal"
+              data-bs-target="#scheduleVisitModal{{ room.id }}"
+            >
+              Contact
+            </button>
+            {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+<br />
+<br />
+<section class="py-lg-10 py-8" style="background-color: #faebe9;">
+  {% comment %} <div class="container">
+    <div class="row align-items-center gy-7">
+      <div class="col-lg-6 col-12">
+        
         <div
           id="aboutCarousel"
           class="carousel slide"
@@ -221,230 +492,11 @@
           </button>
         </div>
 
-        <!-- Svg decoration -->
-        <figure class="position-absolute start-0 bottom-0">
-          <svg
-            class="fill-danger"
-            width="140px"
-            height="140px"
-            viewBox="0 0 163 163"
-          >
-            <path
-              d="M39.5002 97.4376C37.0579 73.3386 34.6156 49.1923 32.2202 25.0933C30.8581 25.3773 29.4961 25.6141 28.134 25.8981C43.6804 42.4692 59.2737 58.9928 74.8201 75.5639C75.8064 74.8537 76.8397 74.1435 77.826 73.4333C53.1679 65.9053 27.8992 61.2181 2.16076 59.3716C2.53651 60.3659 2.91225 61.3128 3.28799 62.307C25.0811 52.3644 46.8742 42.3745 68.6673 32.4319C67.587 31.8637 66.5068 31.2482 65.4265 30.6801C55.2345 52.175 45.0894 73.7174 34.8974 95.2123C33.958 97.2009 38.2791 97.8637 39.1245 96.0646C49.3165 74.5696 59.4616 53.0273 69.6536 31.5323C70.4521 29.8278 67.4461 29.307 66.4128 29.7805C44.6197 39.6284 22.8266 49.571 1.03353 59.561C-1.12699 60.5552 0.42295 62.3544 2.16076 62.4964C27.0537 64.2956 51.6649 68.8408 75.5716 76.132C76.6049 76.4634 80.2214 75.7532 78.5775 74.0014C63.0312 57.4304 47.4378 40.9068 31.8914 24.3357C30.9991 23.3888 27.6174 23.1047 27.8052 25.1406C30.2476 49.2396 32.6899 73.3859 35.0853 97.4849C35.3201 99.5208 39.6881 99.4735 39.5002 97.4376Z"
-            ></path>
-            <path
-              d="M46.8741 1.18358C45.4181 5.39736 44.8075 9.70582 44.9484 14.1563C45.0424 16.3342 49.4104 16.3342 49.3165 14.1563C49.1756 9.9899 49.7392 6.01285 51.1012 2.03581C51.8527 -0.142097 47.5317 -0.804937 46.8741 1.18358Z"
-            ></path>
-            <path
-              d="M15.8286 7.00718C17.9422 9.80058 20.6663 11.9311 23.8601 13.3515C24.7995 13.7776 26.2085 13.6356 26.8661 12.7834C27.5236 11.9311 26.96 10.9369 26.0676 10.5581C23.4844 9.42182 21.3239 7.67002 19.633 5.39743C18.4119 3.69298 14.3257 4.97131 15.8286 7.00718Z"
-            ></path>
-            <path
-              d="M2.48911 34.0889C6.43441 35.5567 10.3797 37.0244 14.325 38.5394C16.1568 39.2023 19.2566 37.1664 16.5325 36.1248C12.5872 34.6571 8.6419 33.1894 4.6966 31.6743C2.91182 31.0115 -0.188063 33.0473 2.48911 34.0889Z"
-            ></path>
-          </svg>
-        </figure>
+     
 
-        <figure class="position-absolute end-0 bottom-0">
-          <svg width="163px" height="163px" viewBox="0 0 163 163">
-            <path
-              class="fill-warning"
-              d="M145.6,66.2c-0.9-0.3-1.6,0.2-2.1-0.4c-0.5-0.7-1-1.5-1-2.4c0-3.1,0.1-6.2,0-9.3c0-0.7,0.3-1.3,0.5-1.9 c0.8-1.6,1.6-3.2,2.7-4.5c0.5-0.6,1.2-1.2,2-1.5c0.4-0.2,0.8,0.4,1.3-0.1c0.4-0.4,1,0.7,1.6,0.7c0.4,1-0.4,1.5-1,2.1 c0.7,0.3,1.4,0.3,2.1,0.7c0.6,0.4,1.2,0.7,1,1.5c-0.2,1,0.6,1.3,1,1.9c-0.2,0.3-0.6,0.4-0.5,0.8c1.2,3.2,0.3,5.4-0.7,8.1 c-0.3,0.7-0.7,1.6-0.7,2.2c-0.1,1.5-1.2,2.7-1.4,4.1c-0.2,1.1-0.9,1.7-2.1,1.6c-0.2,0-0.4,0.5-1,0.4c-0.2-0.2-0.7-0.5-0.7-0.8 c0-1-0.1-1.7-1.1-2.1C145.5,67.2,145.6,66.6,145.6,66.2"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M94.3,143.5c1.1,0.3,2.4-0.5,3.2,0.7c-0.4,0.7-0.7,1.4-1,2.1c0.5,0.5,0.7,0.2,1.2,0.1c1.6-0.6,2-0.4,2.5,1.2 c0.1,0.2,0,0.6,0.3,0.6c1.8,0.4,1.4,2.2,2.1,3.2c-0.8,0.9,0.5,1.8,0.1,2.6c-0.5,0.8-0.3,2-1.3,2.6c-0.3,0.2-0.1,0.5-0.2,0.7 c-0.3,2.1-1.2,3.7-3.4,4.4c-0.3,0.1-0.4,0.6-1,0.4c-0.3-0.6-0.6-1.3-1-1.9c-0.5-0.2-1.5,0.3-1.4-1h-3c-0.2-1.4,0-2.9-1.1-3.9 c-0.1-0.1-0.1-0.4,0-0.5c0.7-1.2,0.2-2.6,0.7-3.8c0.3-0.6,0.4-1,0.1-1.6c-0.9-1.3,0-2.4,0.7-3.3C92.5,145,93.4,144.3,94.3,143.5"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M119.6,77.3c-0.4,0.8-1.1,0.6-2,0.8c0.2,1.1-0.4,2.2,0.5,3.3c-0.8,0-0.8,0-1.2-0.3c-0.6,0.3-0.8,1-1.2,1.6 c0.1-1.9-0.6-3.2-2-4.1c-0.6-0.1-0.7,0.3-1,0.5c-1-1.9-1-2.8-0.2-7.7c0.4-2.5,1.7-4.6,3.6-6.8c0.6-0.1,1.5,1.5,2.3,0 c0.8,1.5-0.7,2.3-0.8,3.7c0.8-0.4,1.6-0.7,2.4-0.4c0.4,0.4-0.1,1,0.3,1.4c0.8,0.6,1.4,1.3,0.4,2.3c1.1,0.8-0.3,1.5-0.1,2.4 c0.2,0.8,0,1.7,0,2.5c-0.8-0.2-1-1.1-1.8-1C118.2,76.4,119.5,76.5,119.6,77.3"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M25,131c-0.3-0.6-1.2-0.3-1.7-0.5v-1.2c-0.1-0.1-0.1-0.2-0.2-0.2c-1.4,0.5-2.2-1-3.4-1.2 c-1.2-0.1-1.9-1-2.1-2.2c-0.1-0.5,0.1-0.8,0.5-1.1c-2-1.7-0.8-3.4-0.1-5.1c0.8-2.2,2.6-2.5,4.6-2.4c0.4,1.1,0.2,2-0.6,2.7 c1.5,1,2-0.5,3-0.8c0.3,0.6,0.6,1.2,0.9,1.6c0,0.6-0.8,0.8-0.4,1.4c0.7,0.8,0.9-0.5,1.7-0.3c1,0.9,0.9,2.2,0.8,3.4 c0.4,0.1,0.6,0.2,1,0.3c-0.1,0.6-1,0.8-1,1.5c0,0.8,0.8,0.2,1,0.7C27.7,128.8,26.9,130.3,25,131"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M84.9,95H87c0.4,0.4,0.3,1.6-0.3,2.8c1.2,1,1.7-0.5,2.4-0.8c0.8,0,0.8,0.6,1.2,0.7c0.2,0.8-0.7,0.9-0.4,1.7 c0.5,0.3,1.7,0,1.9,0.9c0.2,0.7,0.3,1.5-0.5,2.1c0.3,0.1,0.6,0.2,0.9,0.3c-0.1,0.7-1.1,1.3-0.5,2.2c-1.1,1.5-3,2.1-4.4,3.3 c-0.3,0.2-0.8,1-1.5,0.5c-0.3-0.4,0.4-0.4,0.3-0.8c-0.7-0.5-1.6,0.1-2.4-0.3c-0.2-0.6,0.1-1.4-0.8-1.8c-1.1,0.5-2.2,0.7-3.2-0.8 c1.3-0.8,3-1.1,3.2-3c-1,0-1.7,0.9-2.7,1c-0.2-0.2-0.5-0.4-0.8-0.7c-0.1-0.1,0.1-0.1,0.2-0.3c0.6-1.1,2.4-1,2.5-2.5 c1.2-0.5,1.1-1.7,1.3-2.5C83.8,96.3,84.3,95.7,84.9,95"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M41.2,153.9c0.3-0.7,0.9-0.8,0.4-1.6c-0.3-0.3-1.1,0.2-1.8-0.2c0-0.2-0.1-0.4-0.1-0.7c-0.1-0.1-0.2-0.2-0.3,0 c-0.3,0.4-0.7,0.4-1.1,0.4c-1.3,0-1.5-0.4-1.6-1.7c0-0.6,0.4-0.8,0.5-1.4c-0.4,0-0.8-0.1-1.4-0.1c-0.4-1.9,0.7-3.6,1.1-5.4 c0.2-0.9,1.6-1.3,2.7-1.3c0.4,0.2,0.3,0.6,0.3,0.7c0.2,0.4,0.3,0.3,0.4,0.1c0.6-0.5,1.3-0.6,1.7,0.1c0.5,0.7,1.1,0.6,1.8,0.7 c0.4,0.4,0.1,0.8,0.2,1.2c0.3,0.4,0.8,0.2,1.3,0.3c1,0.7,0.5,2.1,1.3,2.9C43.8,152.3,43.1,153.1,41.2,153.9"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M70.9,43.4c-0.3-1.4-1.2-1.8-2.6-1.5c-1.2-2.3-0.8-4.8-0.5-7.2c0.1-0.5,0.4-1.1,0.3-1.7 c-0.2-1.1,0.5-1.9,0.6-2.9c0.1-0.7,1.3-0.9,2-1.3c0.9,0.8,0.9,0.8,1.2,2c0.3,0,0.6,0,0.4,0c1.3,0,0.8,0.9,1.3,1.2 c0.3,0.1,0.8,0.5,0.7,1c-0.2,0.8,1,1.4,0.5,2.1c-0.5,0.7-0.2,1.5-0.5,2.1c-0.8,1.5-1,3.2-1.5,4.8C72.6,43.1,72,43.4,70.9,43.4"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M125.4,118.4c-0.4-0.3-0.6-0.7-1.3-0.8c-1.6-0.1-1.6-0.2-1.9-1.9c-1.1-0.4-2.2,0-3.2,0.4 c-0.5-0.5-0.2-0.9-0.4-1.4c0.4-0.1,0.7-0.2,1-0.4v-3c-0.5,0.2-1,0.3-1.7,0.5c-0.3,0-0.4-0.6-0.8-0.7c0.6-1.5,1.8-2.4,2.8-3.5 c1.3,0.3,2.6-1.1,3.8,0.4c0,0.1-0.1,1.8,0,2.1c-0.2,0-0.5,0.1-0.7,0.1c-0.2,0-0.3,0-0.5,0c-0.4,0.4-0.1,1.1-0.7,1.5 c1.3-0.5,2.4-1,3.3-2c0.4,0.4,0.7,0.8,1.4,0.6c-1.1,0.9,0.4,2.1-1,2.9c1,0,1.1-0.6,1.5-0.8c0.4-0.1,0.8-0.1,1.2-0.2 c0.5,1,1.1,1.8,0.6,3c-0.7,0.6-2.2,0.4-2.5,2.1c1.2-0.2,1.9-0.9,2.5-1.5c0.7,0.1,0.7,0.5,0.6,0.8c-1.3-0.1-1.2,1.5-2.3,1.9 c-0.9,0.3-1.6,1-2.7,1.8C124.7,119.5,125.1,119,125.4,118.4"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M101.7,41c-0.3,0.3-0.6,0.6-0.9,0.9c0.9,0.6-0.9,1.6,0.4,2.1c-2,2.3-2,2.4-2.1,4.8h-2.4c-0.2-0.1,0-0.5-0.2-0.8 c-2.4-0.3-2.9-0.8-3-3.3c0-0.6,0.2-1.4-0.5-1.8c0.5-0.7,0.2-1.6,0.7-2.4c1-1.5,2.3-2.7,3.5-3.9c0.5-0.2,1-0.1,1.4,0 c0.2,1-1.1,1.6-0.2,2.6c0.3-0.4,0.6-0.8,0.9-1.3C100.2,39.2,101.7,39.5,101.7,41"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M140.4,5.4c-0.4,0.6-1.2-0.1-1.5,0.6c0.7,0.4,1.5,0.1,2.3,0.2c0.3,1.1,0.9,2.1,1.3,3.2c0.9,2.4,0.3,4.4-0.6,6.6 c-0.4,0.9-0.9,1.2-1.9,1c-0.2-0.5-0.5-1.2-0.9-1.9c-0.6-0.2-1.5,0-1.9-1c0.1-1.7,0.1-3.6-1.1-5.2c0.4-0.7,0.7-1.3,1.1-1.9 c-0.3-0.1-0.6-0.2-1-0.4c0.2-0.8,0.5-1.6,1.3-2.3h2.2C140,4.6,140.5,4.8,140.4,5.4"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M65.7,68.8c-0.4,0.6-0.9,0.4-1.4,0.4c-1.2-1.1-0.4-2.9-1.4-4.1c1.5-3,1.5-3,4.1-4.2c0.5,0.1,0.8,0.5,1,1 c0.1,0.6-0.8,0.7-0.5,1.3c0.5,0.6,0.9,0.2,1.2-0.2c1.5,0.6,1.1,2.5,2.4,3.3c-0.1,1.1,0.2,2.2-0.2,3.2L69,72.2c-0.3,0-0.7,0-1,0 c-0.3-0.5-0.9-2.2-0.8-2.4C66.7,69.6,66.2,69.2,65.7,68.8"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M37.5,69.7c-0.5,0.2,0,0.9-0.4,1c-0.7,0.2-1-0.2-1.2-0.6c-0.4-0.7,0.1-1.6-0.2-2.2c-0.5-0.7-0.6-1.2-0.1-2 c0.5-0.6,0.2-1.5,0.6-2.3c0.9-2,0.9-2.1,3-2.1c0.1,0.1,0.2,0.1,0.2,0.2c0,0.3,0,0.7,0,1.1c0.7,0.4,1.7,0.1,2.1,1.3 c0.3,0.9,1.2,1.5,1,2.7c-0.2,0.9,0.1,1.8-0.8,2.5c-0.4,0.4-0.8,1.1-0.8,2c0,0.6-0.5,1-1.2,1.1c-0.6,0.1-1-0.3-1.2-0.7 C38,71,37.8,70.3,37.5,69.7"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M53.9,87.8c0.7,0,1.4,0,2.1,0c0.5,0.3,0.1,1,0.4,1.4c0.4,0.3,0.8,0.1,1.2,0.2c0.6,1.2,1.4,2.4,1.7,3.6 c0.4,1.4-0.2,2.7-0.7,4c-1,0.4-1.5-0.4-2.1-0.9c-0.7,0-1.4,0-2.1,0c-0.4-1-0.8-1.8-2.1-1.5c-0.6-0.7,0.2-1.8-0.7-2.3 c0.5-0.6,0.9-1.3,1-2.1C52.8,89.2,53.2,88.5,53.9,87.8"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M0.1,95.7c0.9-1.3,2.3-1.7,3.8-1.8c1,1.2-0.7,1.5-0.8,2.3c1.1,1,2-0.7,3.1,0c0.6,0.6-0.2,0.8-0.3,1.2 c0.4,0.5,1,0,1.4,0.3c0.4,1.1-0.3,2.3,0.6,3.3c-0.8,0.8-0.7,2.2-1.9,2.8c-1.1-0.2-1.8-1-2.6-1.7c-0.7-0.6-1.9-0.5-2.6-1.9 C1,98.9-0.4,97.4,0.1,95.7"
-            ></path>
-            <path
-              class="fill-warning"
-              d="M155.5,91.5c-0.9-0.5-1.7-0.7-2.3-1.6c0.4-0.2,0.8-0.5,1.2-0.7c-1.2-0.4-2.1,0.7-3.1,0c0.6-1,1.8-1,2.5-1.7 c0.1-0.6-0.3-0.6-0.7-0.7c-0.7-0.2-0.9,0.9-1.6,0.5c-0.3-0.3-0.4-0.7-0.1-0.9c1.7-1,3-2.3,4.5-3.5c0.9-0.7,1.1-0.9,2.5-1.2 c-0.1,0.5-0.6,0.7-0.9,1.1c0.7,0.7,1.3,0.1,1.9-0.2c0.1,1.1,0.9,1.9,0.5,3.4C158.3,87.4,157.4,89.8,155.5,91.5"
-            ></path>
-          </svg>
-        </figure>
+      
 
-        <!-- Support guid -->
-        <div class="position-absolute top-0 end-0 z-index-1 mt-n4">
-          <div
-            class="bg-blur-custom border border-light rounded-3 text-center shadow-lg p-3"
-          >
-            <!-- Icon -->
-            <i class="fas fa-headset text-danger fs-3 mb-1"></i>
-
-            <!-- Title -->
-            <h5 class="text-dark mb-1">24 / 7</h5>
-            <h6 class="text-dark fw-light small mb-0">Guide Supports</h6>
-          </div>
-        </div>
-
-        <!-- Round image group -->
-        <div
-          class="vstack gap-5 position-absolute top-0 start-0 d-none d-md-flex mt-4 ms-n3"
-        >
-          <img
-            class="icon-lg shadow-lg border border-3 border-white rounded-circle"
-            src="{% static 'images/hero.avif' %}"
-            width="7%"
-            alt="avatar"
-          />
-          <img
-            class="icon-xl shadow-lg border border-3 border-white rounded-circle"
-            src="{% static 'images/image.png' %}"
-            width="15%"
-            alt="avatar"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<br />
-
-<div class="container py-5">
-  <h2
-    class="text-center mb-5"
-    style="color: rgb(138, 78, 19) !important; font-weight: 600"
-  >
-    <span class="position-relative d-inline-block"
-      >Our Homes
-      <!-- SVG decoration -->
-      {% comment %} <span
-        class="position-absolute top-50 start-50 translate-middle z-index-n1"
-      >
-        <svg class="fill-orange" width="303" height="86" viewBox="0 0 303 86">
-          <path
-            d="M288.197 19.3999C281.599 15.6998 273.654 13.03 265.424 10.926C256.533 8.64794 247.263 6.92124 237.946 5.4267C218.461 2.249 198.384 0.406219 178.237 0.0579769C158.609 -0.275755 138.888 0.8125 119.733 3.49686C108.17 5.10748 96.8189 7.2985 85.8466 10.0264C81.4955 11.0131 77.168 12.0723 72.9115 13.2331C56.382 17.7022 40.5146 23.4192 26.3972 30.355C12.9182 36.9861 0.716203 46.0404 0.999971 57.2131C1.14185 62.2772 4.16871 67.051 9.98595 70.693C15.4721 74.1319 22.6846 76.3809 29.9679 78.0206C38.7647 80.0085 48.0345 81.3289 57.257 82.4026C67.1179 83.5489 77.0734 84.2889 87.0762 84.6807C107.413 85.4642 127.892 84.7968 148.063 83.0266C168.399 81.2418 188.429 78.3543 208.127 74.8139C227.399 71.3459 246.436 67.2976 265.141 62.8285C278.927 59.5348 294.227 55.0802 300.446 46.2435C307.091 36.812 299.949 25.973 288.197 19.3999ZM298.862 46.7804C295.48 50.9593 289.592 54.0935 283.207 56.4876C276.633 58.9543 269.468 60.7391 262.279 62.4077C252.915 64.5843 243.503 66.6737 234.044 68.6616C215.174 72.6083 196.019 76.0762 176.534 78.7171C157.191 81.3289 137.54 83.0991 117.747 83.6505C97.9304 84.2019 77.9957 83.5634 58.4866 81.3289C49.5243 80.2987 40.5146 79.0363 31.907 77.1645C24.5764 75.5829 17.3403 73.4499 11.6649 70.1126C5.49296 66.4561 2.15869 61.5226 2.22963 56.2555C2.32422 50.7417 5.72943 45.489 10.9555 41.0489C16.1106 36.6959 22.7319 33.0974 29.6842 29.8472C36.2108 26.8145 43.0213 24.0141 50.0918 21.4748C48.4601 22.1278 46.8521 22.7953 45.2678 23.4772C37.7716 26.684 30.4409 30.1664 23.9615 34.1131C17.695 37.9438 12.1615 42.3839 9.30018 47.5785C6.55709 52.5554 6.10779 58.1853 9.77313 63.0462C13.0838 67.4427 19.303 70.7655 26.279 72.8985C34.6974 75.4813 44.2036 76.2358 53.497 76.381C63.8309 76.5406 74.2357 76.1488 84.5696 75.757C95.0454 75.3652 105.497 74.7993 115.926 74.0884C136.783 72.6664 157.545 70.6204 178.071 67.9361C187.956 66.6447 197.817 65.2227 207.583 63.6411C208.269 63.525 208.718 62.3642 208.009 62.4658C188.358 65.629 168.447 68.2118 148.394 70.2142C128.435 72.202 108.312 73.624 88.1404 74.4366C78.0666 74.8429 67.9219 75.1911 57.8008 75.2056C48.3419 75.2201 38.6465 74.7558 29.8261 72.5068C22.5427 70.6785 15.8032 67.6169 11.8777 63.3509C7.33745 58.4175 7.52663 52.4393 10.6481 47.2302C13.7695 41.9776 19.7523 37.581 26.3263 33.8084C32.7583 30.1083 39.8289 26.7855 47.1359 23.7529C59.2197 18.7034 72.2257 14.4955 85.7756 11.1292C90.7889 9.99737 95.8494 8.98167 100.981 8.08205C117.96 5.07846 135.553 3.32274 153.218 2.88744C161.754 2.66979 170.315 2.78587 178.851 3.19215C179.537 3.22117 180.128 2.06037 179.277 2.01684C167.69 1.45094 156.032 1.47996 144.468 2.06037C145.745 1.97331 146.999 1.88625 148.275 1.8137C167.879 0.6674 187.696 1.04466 207.157 2.78587C226.075 4.46904 245.111 7.25497 262.894 11.608C278.714 15.4677 294.085 21.6635 299.808 32.0092C302.456 36.812 302.574 42.1662 298.862 46.7804Z"
-          ></path>
-        </svg>
-      </span>
-    </span> {% endcomment %}
-  </h2>
-
-  <div class="row gy-5">
-    {% for room in house %}
-    <div class="col-12">
-      <div class="room-card d-flex flex-column flex-md-row align-items-start">
-        <!-- Image Section -->
-        <div class="room-image">
-          <img
-            src="{{room.image.url}}"
-            class="img-fluid"
-            alt="Default Room Image"
-          />
-        </div>
-
-        <!-- Text Section -->
-        <div class="room-details px-4 py-3">
-          <h4 style="color: rgb(0, 0, 0) !important; font-weight: 600">
-            {{ room.title }}
-          </h4>
-          <p class="room-description">{{ room.description|truncatewords:25|linebreaksbr }}....</p>
-
-          <!-- Amenities tags -->
-
-          <div class="amenities">
-            {% for r in room.amenities.all %}
-            <span class="badge badge-amen">{{ r.tag.name }}</span>
-            {% endfor %}
-          </div>
-
-          <div class="button-group mt-4">
-            <!-- Button to trigger modal -->
-            <a
-              href="{% url 'house_detail' pk=room.id %}"
-              class="btn custom-btn mb-0"
-            >
-              View house
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="#F5EEDD"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-arrow-right ms-2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            {% comment %}
-            <button
-              class="btn-visit"
-              data-bs-toggle="modal"
-              data-bs-target="#scheduleVisitModal{{ room.id }}"
-            >
-              Contact
-            </button>
-            {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {% endfor %}
-  </div>
-</div>
-<br />
-<br />
-<section class="py-lg-10 py-8">
-  <div class="container">
-    <div class="row align-items-center gy-7">
-      <div class="col-lg-6 col-12">
-        <img
-          src="{% static 'images/hero.avif' %}"
-          alt="courses dashboard design"
-          class="img-fluid w-100 rounded-3"
-        />
+     
       </div>
       <div class="col-xl-5 offset-xl-1 col-lg-6 col-12">
         <div class="mb-6">
@@ -468,7 +520,7 @@
                     d="M288.197 19.3999C281.599 15.6998 273.654 13.03 265.424 10.926C256.533 8.64794 247.263 6.92124 237.946 5.4267C218.461 2.249 198.384 0.406219 178.237 0.0579769C158.609 -0.275755 138.888 0.8125 119.733 3.49686C108.17 5.10748 96.8189 7.2985 85.8466 10.0264C81.4955 11.0131 77.168 12.0723 72.9115 13.2331C56.382 17.7022 40.5146 23.4192 26.3972 30.355C12.9182 36.9861 0.716203 46.0404 0.999971 57.2131C1.14185 62.2772 4.16871 67.051 9.98595 70.693C15.4721 74.1319 22.6846 76.3809 29.9679 78.0206C38.7647 80.0085 48.0345 81.3289 57.257 82.4026C67.1179 83.5489 77.0734 84.2889 87.0762 84.6807C107.413 85.4642 127.892 84.7968 148.063 83.0266C168.399 81.2418 188.429 78.3543 208.127 74.8139C227.399 71.3459 246.436 67.2976 265.141 62.8285C278.927 59.5348 294.227 55.0802 300.446 46.2435C307.091 36.812 299.949 25.973 288.197 19.3999ZM298.862 46.7804C295.48 50.9593 289.592 54.0935 283.207 56.4876C276.633 58.9543 269.468 60.7391 262.279 62.4077C252.915 64.5843 243.503 66.6737 234.044 68.6616C215.174 72.6083 196.019 76.0762 176.534 78.7171C157.191 81.3289 137.54 83.0991 117.747 83.6505C97.9304 84.2019 77.9957 83.5634 58.4866 81.3289C49.5243 80.2987 40.5146 79.0363 31.907 77.1645C24.5764 75.5829 17.3403 73.4499 11.6649 70.1126C5.49296 66.4561 2.15869 61.5226 2.22963 56.2555C2.32422 50.7417 5.72943 45.489 10.9555 41.0489C16.1106 36.6959 22.7319 33.0974 29.6842 29.8472C36.2108 26.8145 43.0213 24.0141 50.0918 21.4748C48.4601 22.1278 46.8521 22.7953 45.2678 23.4772C37.7716 26.684 30.4409 30.1664 23.9615 34.1131C17.695 37.9438 12.1615 42.3839 9.30018 47.5785C6.55709 52.5554 6.10779 58.1853 9.77313 63.0462C13.0838 67.4427 19.303 70.7655 26.279 72.8985C34.6974 75.4813 44.2036 76.2358 53.497 76.381C63.8309 76.5406 74.2357 76.1488 84.5696 75.757C95.0454 75.3652 105.497 74.7993 115.926 74.0884C136.783 72.6664 157.545 70.6204 178.071 67.9361C187.956 66.6447 197.817 65.2227 207.583 63.6411C208.269 63.525 208.718 62.3642 208.009 62.4658C188.358 65.629 168.447 68.2118 148.394 70.2142C128.435 72.202 108.312 73.624 88.1404 74.4366C78.0666 74.8429 67.9219 75.1911 57.8008 75.2056C48.3419 75.2201 38.6465 74.7558 29.8261 72.5068C22.5427 70.6785 15.8032 67.6169 11.8777 63.3509C7.33745 58.4175 7.52663 52.4393 10.6481 47.2302C13.7695 41.9776 19.7523 37.581 26.3263 33.8084C32.7583 30.1083 39.8289 26.7855 47.1359 23.7529C59.2197 18.7034 72.2257 14.4955 85.7756 11.1292C90.7889 9.99737 95.8494 8.98167 100.981 8.08205C117.96 5.07846 135.553 3.32274 153.218 2.88744C161.754 2.66979 170.315 2.78587 178.851 3.19215C179.537 3.22117 180.128 2.06037 179.277 2.01684C167.69 1.45094 156.032 1.47996 144.468 2.06037C145.745 1.97331 146.999 1.88625 148.275 1.8137C167.879 0.6674 187.696 1.04466 207.157 2.78587C226.075 4.46904 245.111 7.25497 262.894 11.608C278.714 15.4677 294.085 21.6635 299.808 32.0092C302.456 36.812 302.574 42.1662 298.862 46.7804Z"
                   ></path>
                 </svg>
-              </span> {% endcomment %}
+              </span>
             </span>
           </h2>
 
@@ -504,7 +556,44 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
+
+  <br>
+
+
+   <h2
+    class="text-center"
+    style="color: #f56551 !important; font-weight: 600"
+  >
+    <span class="position-relative d-inline-block"
+      >Amenities
+   
+  </h2>
+
+
+    <div class="container py-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+
+          
+
+            {% for a in amenities %}
+            <div class="col">
+                <div class="card badge-amen ">
+                    {% if a.image %}
+                    <img src="{{ a.image.url }}" class="card-img-top mx-auto" style="width: 150px; height: 150px;" alt="{{ a.name }}">
+                {% else %}
+                    <img src="{% static 'images/img4.jpg' %}" class="card-img-top mx-auto" style="width: 150px; height: 150px;" alt="Default Image">
+                {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{{ a.name }}</h5>
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
 </section>
 
 <br />
@@ -518,7 +607,7 @@
             Loved by
             <span
               class="position-relative d-inline-block"
-              style="color: rgb(138, 78, 19) !important; font-weight: 600"
+              style="color:  #f56551 !important; font-weight: 600"
               >100+
               <!-- SVG decoration -->
               <span
@@ -562,7 +651,8 @@
                 <div>
                   {% for _ in "12345"|slice:":r.rating|stringformat:'i'" %}⭐️{% endfor %}
                 </div>
-                <p>"{{ r.description }}"</p>
+                <br>
+                <p style="color:rgb(0, 0, 0); font-weight: 600">"{{ r.description }}"</p>
                 <div class="testimonial-footer">
                   {% if r.reviewer_profile_pic %}
                     <img
@@ -576,8 +666,8 @@
                     />
                   {% endif %}
                   <div>
-                    <div class="name">{{ r.reviewer_name }}</div>
-                    <div class="role">{{ r.reviewer_location }}</div>
+                    <div class="name" style="color: #000000; font-weight: 600" >{{ r.reviewer_name }}</div>
+                    <div class="role" style="color: #000000;" >{{ r.reviewer_location }}</div>
                   </div>
                 </div>
               </div>
@@ -614,12 +704,77 @@
 
 <br>
 <br>
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-5 gx-4">
+      <div class="col-xl-6 col-lg-7">
+        <div class="pe-lg-5 mb-4">
+          <h2 class="fw-bold mb-3">
+            Discover why
+            <span class="text-primary fw-bold" style="color: #f56551!important">Casa Living</span>
+            is the best choice for YOU.
+          </h2>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <div class="col-md-6">
+            <div>
+              <h3 class="fs-4 fw-bold" style="color: #f56551!important">Expertise</h3>
+              <p class="mb-0">Our team at Casa Living PG in Pune brings years of experience and a deep understanding of the unique needs of PG residents.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <h3 class="fs-4 fw-bold" style="color: #f56551!important">Proven Results</h3>
+              <p class="mb-0">Casa Living PG in Pune has built a strong reputation with high occupancy rates and positive feedback from residents.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row text-center text-md-start">
+          <div class="col-4 border-end border-md-end-0 border-lg-end">
+            <div class="ps-2 ps-md-3">
+              <h3 class="fs-5">Projected Beds</h3>
+              <span class="fs-2 fw-bold text-primary" style="color: #f56551!important">2500+</span>
+            </div>
+          </div>
+          <div class="col-4 border-end border-md-end-0 border-lg-end">
+            <div class="ps-2 ps-md-3">
+              <h3 class="fs-5">Operational Beds</h3>
+              <span class="fs-2 fw-bold text-primary" style="color: #f56551!important">750+</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="ps-2 ps-md-3">
+              <h3 class="fs-5">Newly Sign Beds</h3>
+              <span class="fs-2 fw-bold text-primary" style="color: #f56551!important">1100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0">
+        <div>
+          <img src="{% static 'images/img.jpg' %}" alt="" class="img-fluid rounded-3 w-100" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br>
+
+
+
 
 <section class="card-grid pt-0">
   <div class="container">
     <h2
       class="text-center mb-5"
-      style="color: rgb(138, 78, 19) !important; font-weight: 600"
+      style="color:  #f56551 !important; font-weight: 600"
     >
       <span class="position-relative d-inline-block"
         >Gallery
@@ -732,7 +887,7 @@
         <div class="mb-4 text-center">
            <h2
             class="fw-bold display-5"
-            style="color: rgb(138, 78, 19) !important; font-weight: 600; text-align: center"
+            style="color:  #f56551 !important; font-weight: 600; text-align: center"
           >
             <span class="position-relative d-inline-block"
               >Contact Us
@@ -759,16 +914,16 @@
        <div class="text-center">
   <p class="mb-0">
     Email: 
-    <a href="mailto:info@thecasaliving.com" style="color: rgb(138, 78, 19);">
+    <a href="mailto:info@thecasaliving.com" style="color:  #f56551;">
       info@thecasaliving.com
     </a>
   </p>
   <p>
     Phone: 
-    <a href="tel:+98956866051" style="color: rgb(138, 78, 19);">
+    <a href="tel:+98956866051" style="color:  #f56551;">
       +91 8956866051
     </a> / 
-    <a href="tel:+918956866057" style="color: rgb(138, 78, 19);">
+    <a href="tel:+918956866057" style="color:  #f56551;">
       +91 8956866057
     </a>
   </p>
