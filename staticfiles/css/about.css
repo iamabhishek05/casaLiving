@@ -201,7 +201,7 @@
 
     
   .custom-btn {
-    background-color: rgb(138, 78, 19) !important;
+   background-color: #f56551 !important;
     color: #F5EEDD !important;
     font-weight: 600;
     display: inline-flex;
@@ -215,3 +215,6 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
   }
+ *{
+        font-family:'Poppins', sans-serif;
+    } 
