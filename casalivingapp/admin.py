@@ -2,7 +2,7 @@ from django.contrib import admin
 from import_export.admin import ExportMixin
 from .models import (
     House, Room, RoomImage, GalleryImage, ContactForm, TeamMember,
-    AmenityTag, HouseAmenity, HouseImage, Review
+    AmenityTag, HouseAmenity, HouseImage, Review, QuickLead
 )
 
 # House Admin
@@ -72,6 +72,11 @@ class ContactFormAdmin(ExportMixin, admin.ModelAdmin):
     list_filter = ('room',)
     ordering = ('-submitted_at',)
 
+class QuickLeadAdmin(ExportMixin, admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'contact_number', 'email', 'submitted_at')
+    search_fields = ('first_name', 'last_name', 'email', 'contact_number')
+    ordering = ('-submitted_at',)
+
 
 # Team Member Admin
 class TeamMemberAdmin(admin.ModelAdmin):
@@ -112,5 +117,7 @@ admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(AmenityTag, AmenityTagAdmin)
 admin.site.register(HouseAmenity, HouseAmenityAdmin)
 admin.site.register(Review, ReviewAdmin)
+admin.site.register(QuickLead, QuickLeadAdmin)
+
 
 

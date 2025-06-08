@@ -69,7 +69,7 @@
 
 
   .custom-btn {
-    background-color: #f56551 !important;
+    background-color: #d32e17 !important;
     color: #F5EEDD !important;
     font-weight: 600;
     display: inline-flex;
@@ -148,7 +148,7 @@
 }
 
 .room-card {
-      background-color: #faebe9 !important;
+      background-color: #fffdfc !important;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     overflow: hidden;
@@ -159,7 +159,18 @@
   
   background-color: #ffd1ca;	
   border-radius: 8px;
-  border: 2px solid #ffa8a3;
+  border: 2px solid #d32e17;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  color: #000000;
+  
+}
+
+
+.amenities-amen{
+  
+  background-color: transparent;	
+  border-radius: 8px;
+  border: 1px solid #d32e17;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   color: #000000;
   
@@ -316,4 +327,24 @@
     font-size: 0.875rem;
     color: #94a3b8;
   }
+
+   .custom-input-container {
+        border: 2px solid #dedede;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 12px;
+    }
+
+    .custom-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .custom-input::placeholder {
+      color: #999;
+    }
  

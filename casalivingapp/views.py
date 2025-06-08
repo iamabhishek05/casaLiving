@@ -1,6 +1,6 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.contrib import messages
-from .models import ContactForm
+from .models import ContactForm, QuickLead
 from django.shortcuts import get_object_or_404, render,redirect
 from .models import Room, TeamMember, House, GalleryImage, Review, AmenityTag
 
@@ -11,15 +11,37 @@ def chunked(iterable, n):
           yield iterable[i:i + n]
 
 def index(request):
-  
-  house = House.objects.all()
-  gallery = GalleryImage.objects.all()
-  amenities = AmenityTag.objects.all()
-  review = Review.objects.all()
-  # Helper function to chunk a queryset or list
-  review_chunks = list(chunked(review, 3))
+    if request.method == "POST" and request.headers.get("x-requested-with") == "XMLHttpRequest":
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        contact_number = request.POST.get("contact_number")
+        email = request.POST.get("email")
 
-  return render(request, 'index.html', {'house': house,'gallery': gallery,'review': review, 'review_chunks': review_chunks, 'amenities': amenities})
+        if first_name and last_name and contact_number and email:
+            QuickLead.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                contact_number=contact_number,
+                email=email
+            )
+            return JsonResponse({"success": True})
+        else:
+            return JsonResponse({"success": False, "error": "All fields are required"})
+
+    # Regular GET page load
+    house = House.objects.all()
+    gallery = GalleryImage.objects.all()
+    amenities = AmenityTag.objects.all()
+    review = Review.objects.all()
+    review_chunks = list(chunked(review, 3))
+
+    return render(request, 'index.html', {
+        'house': house,
+        'gallery': gallery,
+        'review': review,
+        'review_chunks': review_chunks,
+        'amenities': amenities
+    })
 
 def house_detail(request, pk):
     house = get_object_or_404(House, pk=pk)
