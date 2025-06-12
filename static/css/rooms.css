@@ -1,20 +1,21 @@
 
 .room-card {
-      background-color: #faebe9 !important;
+      background-color: #fffdfc !important;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-  }
+}
   
-  .badge-amen{
-    
-     background-color: #ffd1ca;	
+ .badge-amen{
+  
+  background-color: #ffd1ca;	
   border-radius: 8px;
-  border: 2px solid #ffa8a3;
+  border: 2px solid #d32e17;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   color: #000000;
-  }
+  
+}
   
   .room-card:hover {
       transform: translateY(-6px);
@@ -141,7 +142,7 @@
     } 
   
   .custom-btn {
-  background-color: #f56551 !important;
+  background-color: #d32e17 !important;
     color: #F5EEDD !important;
     font-weight: 600;
     display: inline-flex;

@@ -1,12 +1,9 @@
   
-@font-face {
-    font-family: 'Mokoto'; 
-    src: url('../fonts/mokoto.regular.ttf'); 
-  }
+
  
  .proheading
  {
-    font-family:'Mokoto';
+    font-family: arial-rounded-mt-pro, sans-serif;
     letter-spacing: 3px;
  }
  h1 {
@@ -216,5 +213,5 @@
     box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
   }
  *{
-        font-family:'Poppins', sans-serif;
+       font-family: arial-rounded-mt-pro, sans-serif;
     } 
