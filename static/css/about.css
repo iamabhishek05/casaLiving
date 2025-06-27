@@ -198,14 +198,15 @@
 
     
   .custom-btn {
-   background-color: #d32e17 !important;
-    color: #F5EEDD !important;
+   background-color: #ca6702   !important;
+    color: #ffffff !important;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
     padding: 10px 18px;
+    border: 2px solid #ca6702 !important;
   }
   
   .custom-btn:hover {
@@ -215,3 +216,26 @@
  *{
        font-family: arial-rounded-mt-pro, sans-serif;
     } 
+
+    
+  
+   .custom-btn_2 {
+    background-color: #ca6702   !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 18px;
+    border: 2px solid #ca6702 !important;
+  }
+  
+  .custom-btn_2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
+  }
+
+
+ 
+  

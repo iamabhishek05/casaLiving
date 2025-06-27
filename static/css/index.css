@@ -1,4 +1,42 @@
 
+/* animate */
+
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.from-top {
+  animation: slideFromTop 2s ease-out forwards;
+}
+
+.from-bottom {
+  animation: slideFromBottom 2s ease-out forwards;
+}
+
+
+
+
+
+
     *{
         font-family: arial-rounded-mt-pro, sans-serif;
     } 
@@ -69,14 +107,15 @@
 
 
   .custom-btn {
-    background-color: #d32e17 !important;
-    color: #F5EEDD !important;
+    background-color: transparent !important;
+    color: #f4eea9 !important;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
     padding: 10px 18px;
+    border: 2px solid #f4eea9 !important;
   }
   
   .custom-btn:hover {
@@ -84,6 +123,23 @@
     box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
   }
   
+
+    .custom-btn_2 {
+    background-color: #ca6702   !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 18px;
+    border: 2px solid #ca6702 !important;
+  }
+  
+  .custom-btn_2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(138, 78, 19, 0.3);
+  }
 
   
   
@@ -148,7 +204,7 @@
 }
 
 .room-card {
-      background-color: #fffdfc !important;
+   background: radial-gradient(circle at center, #fff5f5 60%, #f4eea9 100%) !important;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     overflow: hidden;
@@ -157,9 +213,9 @@
 
 .badge-amen{
   
-  background-color: #ffd1ca;	
+  background-color: transparent;	
   border-radius: 8px;
-  border: 2px solid #d32e17;
+  border: 2px solid #ca6702;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   color: #000000;
   
@@ -300,7 +356,7 @@
 
 
  .testimonial-card {
-    background-color: #ffd1ca;
+    background-color: #F5F5F5;
     color: #000000;
     border-radius: 10px;
     padding: 20px;
@@ -348,3 +404,69 @@
       color: #999;
     }
  
+
+  /* css amenities */
+
+    .glass-card {
+  background: rgb(255 255 255 / 0%);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(19.6px);
+-webkit-backdrop-filter: blur(19.6px);
+/* border: 1px solid rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2); */
+    padding: 30px 20px;
+    transition: transform 0.3s;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .amenities-img-wrapper {
+    background-color: #ffe9d3;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .amenities-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  @media (max-width: 576px) {
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .card-text {
+      font-size: 0.85rem;
+    }
+
+    .amenities-img-wrapper {
+      width: 70px;
+      height: 70px;
+    }
+
+    .amenities-img {
+      width: 35px;
+      height: 35px;
+    }
+  } 

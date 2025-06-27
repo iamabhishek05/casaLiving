@@ -25,6 +25,7 @@ class HouseImage(models.Model):
 # Tags for amenities (e.g., WiFi, AC, Parking, etc.)
 class AmenityTag(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(default='', blank=True)
     image = models.ImageField(upload_to='amenities/', default='')
 
     def __str__(self):
