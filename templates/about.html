@@ -17,7 +17,7 @@
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                                                            <div class="text-center mb-8">
+                                                            <div class="text-center mb-8 animate-on-scroll-top">
                                                                 <h1 class="text-center fw-bold"
     style="color:  #ca6702 !important; font-weight: 600">About Us</h1>
                                                             
@@ -28,7 +28,7 @@
                                                         </div>
                                                     </div>
                                                     <br>
-                                                    <div class="row gy-4">
+                                                    <div class="row gy-4 animate-on-scroll-bottom">
                                                         <div class="col-lg-4 col-md-4 col-12">
                                                             <a href=""
                                                                 class="glightbox rounded-3">
@@ -59,13 +59,13 @@
 
                                             <br>
                                             <br>
-                                             <h1 class="text-center fw-bold"
+                                             <h1 class="text-center fw-bold animate-on-scroll-top"
     style="color:  #ca6702 !important; font-weight: 600">Meet Our Founders</h1>
 
 
  
   
- <section class="py-0 py-xl-5" id="team">
+ <section class="py-0 py-xl-5 animate-on-scroll-bottom" id="team">
    <div class="container team" style="display: block; padding-left:127px">
        <div class="row g-3 justify-content-center">
            <!-- Loop through each team member -->
@@ -90,6 +90,30 @@
        </div>
    </div>
 </section> 
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('animate-on-scroll-top')) {
+            entry.target.classList.add('from-top');
+          } else if (entry.target.classList.contains('animate-on-scroll-bottom')) {
+            entry.target.classList.add('from-bottom');
+          }
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.animate-on-scroll-top, .animate-on-scroll-bottom').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
 
 
 {% endblock content %}

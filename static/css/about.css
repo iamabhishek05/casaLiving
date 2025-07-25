@@ -1,5 +1,42 @@
   
 
+/* animate */
+
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.from-top {
+  animation: slideFromTop 2s ease-out forwards;
+}
+
+.from-bottom {
+  animation: slideFromBottom 2s ease-out forwards;
+}
+
+
+
+
+
  
  .proheading
  {
