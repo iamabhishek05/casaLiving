@@ -217,73 +217,61 @@
 
     <br>
 
-
-  <div class="row gy-5">
-    {% for room in house %}
-    <div class="col-12 animate-on-scroll-bottom">
-      <div class="room-card d-flex flex-column flex-md-row align-items-start">
-        <!-- Image Section -->
-        <div class="room-image">
-          <img
-            src="{{room.image.url}}"
-            class="img-fluid"
-            alt="Default Room Image"
-          />
+<div class="row">
+  <!-- Room Cards (Left) -->
+  <div class="col-12 col-lg-6">
+    <div class="row gy-5">
+      {% for room in house %}
+      <div class="col-12 animate-on-scroll-bottom">
+        <div class="room-card d-flex flex-column flex-md-row align-items-start room-hover"
+             data-location="{{ room.location|urlencode }}"
+              data-lat="{{ room.latitude }}"
+  data-lng="{{ room.longitude }}"
+              data-img="{{ room.image.url }}"
+              
+             data-title="{{ room.title }}">
+          <!-- Image Section -->
+          <div class="room-image">
+            <img src="{{ room.image.url }}" class="img-fluid" alt="Room Image" />
+          </div>
+          <!-- Text Section -->
+          <div class="room-details px-4 py-3">
+            <h4 style="color: #ca6702; font-weight: 600">{{ room.title }}</h4>
+            {% comment %} <p class="room-description">{{ room.description|truncatewords:25|linebreaksbr }}....</p> {% endcomment %}
+            <div class="amenities">
+              {% for r in room.amenities.all %}
+              <span class="badge badge-amen">{{ r.tag.name }}</span>
+              {% endfor %}
+            </div>
+            <div class="button-group mt-4">
+              <a href="{% url 'house_detail' pk=room.id %}" class="btn custom-btn_2 mb-0">
+                View house
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none"
+                     stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="feather feather-arrow-right ms-2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 
-        <!-- Text Section -->
-        <div class="room-details px-4 py-3">
-          <h4 style="color: #ca6702 !important; font-weight: 600">
-            {{ room.title }}
-          </h4>
-          <p class="room-description" style="color: rgb(0, 0, 0) !important;">{{ room.description|truncatewords:25|linebreaksbr }}....</p>
-
-          <!-- Amenities tags -->
-
-          <div class="amenities">
-            {% for r in room.amenities.all %}
-            <span class="badge badge-amen">{{ r.tag.name }}</span>
-            {% endfor %}
-          </div>
-
-          <div class="button-group mt-4">
-            <!-- Button to trigger modal -->
-            <a
-              href="{% url 'house_detail' pk=room.id %}"
-              class="btn custom-btn_2 mb-0"
-            >
-              View house
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-arrow-right ms-2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            {% comment %}
-            <button
-              class="btn-visit"
-              data-bs-toggle="modal"
-              data-bs-target="#scheduleVisitModal{{ room.id }}"
-            >
-              Contact
-            </button>
-            {% endcomment %}
-          </div>
+  <!-- Map Section (Right) -->
+ <div class="d-none d-lg-block col-lg-6">
+      <div class="position-sticky top-0" style="height: 90vh;">
+        <div class="p-3 border rounded shadow-sm" style="height: 100%;">
+          <div id="roomMap" style="width: 100%; height: 100%;"></div>
         </div>
       </div>
     </div>
 
-    {% endfor %}
-  </div>
+</div>
+
 </div>
 <br />
 <br /><section class="py-lg-10 py-8" style="background: radial-gradient(circle at center, #fff5f5 60%, #f4eea9 100%) !important;">
@@ -839,6 +827,54 @@
     });
   });
 </script>
+<script>
+  const map = L.map('roomMap').setView([18.5204, 73.8567], 12); // Pune center
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  const markers = [];
+
+  document.querySelectorAll('.room-hover').forEach(card => {
+    const lat = parseFloat(card.dataset.lat);
+    const lng = parseFloat(card.dataset.lng);
+    const title = card.dataset.title;
+    const img = card.dataset.img || 'https://via.placeholder.com/150'; // Fallback image
+    const location = card.dataset.location;
+
+    const popupContent = `
+      <div class="card border-0" style="width: 15rem;">
+        <img src="${img}" class="card-img-top" style="height: 120px; object-fit: cover;">
+        <div class="card-body p-2">
+          <h6 class="mb-1 fw-bold">${title}</h6>
+          <a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" class="text-primary fw-semibold" style="font-size: 0.9rem;">
+            View in Google Maps
+          </a>
+        </div>
+      </div>
+    `;
+
+    const marker = L.marker([lat, lng]).addTo(map).bindPopup(popupContent);
+
+    // Store marker for future reference
+    markers.push({ marker, lat, lng });
+
+  
+
+    // Hover event on card highlights this marker
+    card.addEventListener('mouseenter', () => {
+      map.setView([lat, lng], 15);
+      marker.openPopup();
+    });
+  });
+</script>
+
+
+
+
+
+
 
 
 <script>
