@@ -14,8 +14,8 @@
 {% endblock %} {% block content %}
 
 <section>
-  <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
-    <div class="carousel-inner">
+  <div id="myCarousel" class="carousel slide carousel-fade p-2" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+    <div class="carousel-inner border rounded">
       <div class="carousel-item active">
         <div class="position-relative">
           <img src="{% static 'images/img2.jpeg' %}" class="d-block w-100" style="border-radius: 0px!important; height: 600px; object-fit: cover; filter: brightness(25%); border: none;" alt="Slide 1">
@@ -219,11 +219,11 @@
 
 <div class="row">
   <!-- Room Cards (Left) -->
-  <div class="col-12 col-lg-6">
+  <div class="col-12 col-lg-8">
     <div class="row gy-5">
       {% for room in house %}
-      <div class="col-12 animate-on-scroll-bottom">
-        <div class="room-card room-hover d-flex flex-column"
+     <div class="col-12 animate-on-scroll-bottom">
+        <div class="room-card d-flex flex-column flex-md-row align-items-start room-hover"
              data-location="{{ room.location|urlencode }}"
               data-lat="{{ room.latitude }}"
   data-lng="{{ room.longitude }}"
@@ -239,7 +239,7 @@
             <h4 style="color: #ca6702; font-weight: 600">{{ room.title }}</h4>
             {% comment %} <p class="room-description">{{ room.description|truncatewords:25|linebreaksbr }}....</p> {% endcomment %}
             <div class="amenities">
-              {% for r in room.amenities.all %}
+              {% for r in room.amenities.all|slice:":4" %}
               <span class="badge badge-amen">{{ r.tag.name }}</span>
               {% endfor %}
             </div>
@@ -262,7 +262,7 @@
   </div>
 
   <!-- Map Section (Right) -->
- <div class="d-none d-lg-block col-lg-6">
+ <div class="d-none d-lg-block col-lg-4">
       <div class="position-sticky top-0" style="height: 90vh;">
         <div class="p-3 border rounded shadow-sm" style="height: 100%;">
           <div id="roomMap" style="width: 100%; height: 100%;"></div>
@@ -449,69 +449,69 @@
 <br>
 <section class="py-5">
   <div class="container">
-    <div class="row align-items-center gy-5 gx-4">
-      <div class="col-xl-6 col-lg-7 animate-on-scroll-top">
-        <div class="pe-lg-5 mb-4">
-          <h2 class="fw-bold mb-3">
-            Discover why
-            <span class="text-primary fw-bold" style="color: #ca6702!important">Casa Living</span>
-            is the best choice for YOU.
-          </h2>
-        </div>
+    <div class="row align-items-stretch gy-5 gx-4">
+      
+      <!-- Content Column -->
+      <div class="col-xl-6 col-lg-7 animate-on-scroll-top d-flex mt-0 pt-0 no-top-margin">
+        <div class="pe-lg-5 mb-4 w-100 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h2 class="fw-bold mb-3">
+              Discover why
+              <span class="text-primary fw-bold" style="color: #ca6702!important">Casa Living</span>
+              is the best choice for YOU.
+            </h2>
 
-        <div class="row gy-4 mb-4">
-          <div class="col-md-6">
-            <div>
-              <h3 class="fs-4 fw-bold" style="color: #ca6702!important">Expertise</h3>
-              <p class="mb-0">Our team at Casa Living PG in Pune brings years of experience and a deep understanding of the unique needs of PG residents.</p>
+            <div class="row gy-4 mb-4">
+              <div class="col-md-6">
+                <div>
+                  <h3 class="fs-4 fw-bold" style="color: #ca6702!important">Expertise</h3>
+                  <p class="mb-0">Our team at Casa Living PG in Pune brings years of experience and a deep understanding of the unique needs of PG residents.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div>
+                  <h3 class="fs-4 fw-bold" style="color: #ca6702!important">Proven Results</h3>
+                  <p class="mb-0">Casa Living PG in Pune has built a strong reputation with high occupancy rates and positive feedback from residents.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div>
-              <h3 class="fs-4 fw-bold" style="color: #ca6702!important">Proven Results</h3>
-              <p class="mb-0">Casa Living PG in Pune has built a strong reputation with high occupancy rates and positive feedback from residents.</p>
-            </div>
-          </div>
-        </div>
 
-        <br>
-
-        <div class="row text-center text-md-start">
-          <div class="col-4 border-end border-md-end-0 border-lg-end">
-            <div class="ps-2 ps-md-3">
-              <h3 class="fs-5">Projected 
-                <br>
-                Beds</h3>
-              <span class="fs-2 fw-bold text-primary" style="color: #ca6702!important">2500+</span>
+          <!-- Bottom Section -->
+          <div class="row text-center text-md-start">
+            <div class="col-4 border-end border-md-end-0 border-lg-end">
+              <div class="ps-2 ps-md-3">
+                <h3 class="fs-5">Projected <br>Beds</h3>
+                <span class="fs-2 fw-bold text-primary" style="color: #ca6702!important">2500+</span>
+              </div>
             </div>
-          </div>
-          <div class="col-4 border-end border-md-end-0 border-lg-end">
-            <div class="ps-2 ps-md-3">
-              <h3 class="fs-5">Operational 
-                 <br>
-                Beds</h3>
-              <span class="fs-2 fw-bold text-primary" style="color: #ca6702!important">750+</span>
+            <div class="col-4 border-end border-md-end-0 border-lg-end">
+              <div class="ps-2 ps-md-3">
+                <h3 class="fs-5">Operational <br>Beds</h3>
+                <span class="fs-2 fw-bold text-primary" style="color: #ca6702!important">750+</span>
+              </div>
             </div>
-          </div>
-          <div class="col-4">
-            <div class="ps-2 ps-md-3">
-              <h3 class="fs-5">Newly Sign 
-                 <br>
-                Beds</h3>
-              <span class="fs-2 fw-bold text-primary" style="color: #ca6702!important">1100</span>
+            <div class="col-4">
+              <div class="ps-2 ps-md-3">
+                <h3 class="fs-5">Newly Sign <br>Beds</h3>
+                <span class="fs-2 fw-bold text-primary" style="color: #ca6702!important">1100</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0 animate-on-scroll-bottom">
-        <div>
-          <img src="{% static 'images/img.jpg' %}" alt="" class="img-fluid rounded-3 w-100" />
+      <!-- Image Column -->
+      <div class="col-xl-6 col-lg-5 mt-5 mt-lg-0 animate-on-scroll-bottom d-flex">
+        <div class="w-100 h-100">
+          <img src="{% static 'images/img.jpg' %}" alt="" class="img-fluid rounded-3 w-100 h-100 object-fit-cover" />
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 <br>
@@ -591,13 +591,14 @@
               data-bs-target="#imageCarouselModal"
             >
               <div class="bg-overlay bg-dark opacity-7"></div>
-              <div class="card-img-overlay d-flex h-100 w-100">
-                <h6
-                  class="card-title m-auto fw-light text-decoration-underline text-black"
-                >
-                  View all
-                </h6>
-              </div>
+             <div class="card-img-overlay d-flex h-100 w-100">
+  <h6 class="card-title m-auto fw-light">
+    <span class="bg-white text-white px-3 py-1 rounded " style="background-color: #ca6702 !important;">
+      View all
+    </span>
+  </h6>
+</div>
+
             </div>
           </div>
           {% endif %}
